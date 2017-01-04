@@ -41,7 +41,6 @@ class driven:
         def _out(fd, lock, events):
             for line in iter(fd.readline, b''):
                 try:
-                    print line
                     js = json.loads(line)
                     if not 'tag' in js or not 'ext' in js:
                         continue
